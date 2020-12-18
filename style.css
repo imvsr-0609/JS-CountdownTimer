@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+}
+
+.countdown{
+    height: 100vh;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("countdown-background.jpg");
+    background-size: contain;
+    background-position: center;
+    position: fixed;
+    width: 100%;
+    
+}
+.text{
+    text-align: center;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%,0);
+    padding-top: 25px;
+    font-size: 3.5em;
+    color: transparent;
+    text-shadow: 0 0 3px rgba(197, 197, 197, 0.9);
+    font-weight: bolder;
+}
+
+.days , .hours , .minutes, .seconds{
+    height: 80%;
+    flex: 1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.days svg{
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+    pointer-events: none;
+}
+
+.hours svg{
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+    pointer-events: none;
+}
+
+.minutes svg{
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+    pointer-events: none;
+}
+
+
+.seconds svg{
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+    pointer-events: none;
+}
+h1,h3{
+    color: white;
+}
+h1{
+    font-size: 4em;
+    font-weight: 400;
+}
+h2{
+    font-size: 1em;
+}
+
+
+@media screen and (max-width:1024px){
+    .countdown{
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("countdown-background.jpg");
+        background-size: contain;
+        background-position: center;
+        width: 100%;
+        
+    }
+
+    .days svg{
+    height: 100%;
+        pointer-events: none;
+    }
+    
+    .hours svg{
+        height: 100%;
+        pointer-events: none;
+    }
+    
+    .minutes svg{
+        height: 100%;
+        pointer-events: none;
+    }
+    
+    
+    .seconds svg{
+       
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .text{
+        text-align: center;
+        position: absolute;
+        bottom: 45%;
+        padding-top: 25px;
+        font-size: 2em;
+        color: transparent;
+        text-shadow: 0 0 3px rgba(197, 197, 197, 0.9);
+        z-index: -1;
+        font-weight: bolder;
+    }
+
+
+
+}
